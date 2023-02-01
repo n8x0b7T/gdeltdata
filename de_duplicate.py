@@ -1,7 +1,8 @@
 import pandas as pd
 
+file = "snorkel_predicted.csv"
 
-df = pd.read_csv("all_translated.csv")
+df = pd.read_csv(file)
 
 print(len(df))
 df = df.drop_duplicates(subset=['title_tr'], keep='first')
@@ -9,4 +10,4 @@ df = df.drop_duplicates(subset=['body_tr'], keep='first')
 df = df.drop_duplicates(subset=['body'], keep='first')
 print(len(df))
 
-df.to_csv("all_translated.csv", index=False)
+df.to_csv(file, index=False)

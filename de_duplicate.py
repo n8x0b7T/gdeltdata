@@ -1,6 +1,7 @@
 import pandas as pd
+import sys
 
-file = "snorkel_predicted.csv"
+file = sys.argv[1]
 
 df = pd.read_csv(file)
 
